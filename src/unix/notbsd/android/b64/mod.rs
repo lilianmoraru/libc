@@ -143,6 +143,15 @@ s! {
     }
 }
 
+// These constants must be of the same type of sigaction.sa_flags
+pub const SA_NOCLDSTOP: ::c_uint = 0x00000001;
+pub const SA_NOCLDWAIT: ::c_uint = 0x00000002;
+pub const SA_NODEFER: ::c_uint = 0x40000000;
+pub const SA_ONSTACK: ::c_uint = 0x08000000;
+pub const SA_RESETHAND: ::c_uint = 0x80000000;
+pub const SA_RESTART: ::c_uint = 0x10000000;
+pub const SA_SIGINFO: ::c_uint = 0x00000004;
+
 pub const O_DIRECT: ::c_int = 0x10000;
 pub const O_DIRECTORY: ::c_int = 0x4000;
 pub const O_NOFOLLOW: ::c_int = 0x8000;
